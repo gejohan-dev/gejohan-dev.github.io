@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Johans page</title>
+  
+  <meta http-equiv="content-type" content="text/html">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="static/reset.css">
+  
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+  
+  <script src="static/jquery.js"></script> 
+  <script src="static/script.js"></script> 
+</head>
+<body>
+
+  <!-- Top Navigation Menu -->
+  <div id="mobile-header" class="topnav">
+    <a href="/introduction" class="active">Johans Page</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="menu-hamburger">
+      <a href="/introduction" class="intro-link">Introduction</a>
+      <a href="/resume" class="resume-link">Resume</a>
+      <a href="/portfolio" class="portfolio-link">Portfolio</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <span class="icon" id="hamburger-icon">
+      <i class="fa fa-bars"></i>
+    </span>
+  </div>
+
+  <div id="desktop-header">
+    <table>
+      <tbody>
+        <tr>
+          
+          <th>
+            <h1 id="title"><a href="/introduction">Johan Page</a></h1>
+          </th>
+
+          <th>
+            <table>
+              <tbody>
+                <tr id="menu">
+                  <th id="intro-menu-item" class="menu-item intro-link" value="intro">
+                    <a href="/introduction">Introduction</a>
+                  </th>
+
+                  <th id="resume-menu-item" class="menu-item resume-link" value="resume">
+                    <a href="/resume">Resume</a>
+                  </th>
+
+                  <th id="portfolio-menu-item" class="menu-item portfolio-link" value="portfolio">
+                    <a href="/portfolio">Portfolio</a>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </th>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div id="main">    
+    <div id="portfolio-page" class="page">
+
+  <h2>Terrain Generation</h2>
+  <div class="container">
+    <iframe allow="fullscreen;" class="responsive-iframe" src="https://www.youtube.com/embed/j_Eyf9xA_d4"></iframe>
+  </div>
+  <br>
+  With this application, I'm trying to explore how to generate interesting terrain. The terrain should both feel "huge" and at the same time be nice to look at up close. It is still a WIP. It's made as much as possible from scratch using C/C++ and OpenGL. Shout-outs to <a href="https://3dtextures.me/" class="page-link">Eren Katsukagi</a>, <a href="https://github.com/ocornut/imgui" class="page-link">Dear ImGui</a> and <a href="https://github.com/nothings/stb/blob/master/stb_image.h" class="page-link">Sean Barret's stb_image.h</a>.
+    
+  <h2>Heightmap Renderer</h2>
+  <div class="container">
+    <iframe allow="fullscreen;" class="responsive-iframe" src="https://www.youtube.com/embed/q4_enZqIZVQ"></iframe>
+  </div>
+  <br>
+  "Heightmap Renderer" is an application I made to render heightmaps from <a href="https://www.lantmateriet.se/sv/Kartor-och-geografisk-information/geodataprodukter/stodsidor/hojddata---nationell-hojdmodell/" class="page-link">Lantm&#228;teriets &#246;ppna data</a>. I tried to do as much as possible from scratch (i.e. no 3rd party or even stdlib libraries). I ended up using <a href="https://github.com/ocornut/imgui" class="page-link">Dear ImGui</a> to create the GUI and <a href="https://github.com/nothings/stb/blob/master/stb_image.h" class="page-link">Sean Barret's stb_image.h</a> to load textures, along with some stblib procedures like "memcpy". The application can render with either OpenGL or DirectX11.
+  
+  <h2>This website</h2>
+  <div class="img-div"><img src="img/architecture.png"></div>
+  This website is currently hosted on <a href="https://github.com/gejohan-dev/gejohan-dev.github.io" class="page-link">Github</a>. I used to host this website on AWS but right now I'm looking for a cheaper option, so Github Pages is a good temporary place for this site. I have replaced the old setup by a Python build script that inserts content into a "main" html file. Feel free to take a look at the Github repository if you are interested in how this works.<br>
+  <br>
+  The server setup might change from the one I had on AWS when I migrate to a new hosting option, but I'll briefly describe the way it worked here. An EC2 instance hosts a <b>Linux distro (arch, ubuntu...) VM</b> which runs an <b>Apache</b> server. When a user requests the site from the server it executes a <b>wsgi</b> script which returns an html template with content based on the path in the url. For example, <a href="/portfolio" class="page-link">/portfolio</a> inserts the content of file <a href="/static/portfolio.html" class="url-link">johangerdin.se/static/portfolio.html</a> into the template. <b>Let's Encrypt</b> is used to configure <b>SSL</b>. There is a bare git repository with a post-receive hook that builds and replaces the served website folder with new changes.<br>
+  <br>
+  The website itself is built in <b>HTML/CSS/Javascript</b> with some <b>JQuery</b>. It has a desktop and a mobile view and should work on most devices.
+  
+</div>
+
+  </div>
+</body>
+</html>

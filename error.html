@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Johans page</title>
+  
+  <meta http-equiv="content-type" content="text/html">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="static/reset.css">
+  
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+  
+  <script src="static/jquery.js"></script> 
+  <script src="static/script.js"></script> 
+</head>
+<body>
+
+  <!-- Top Navigation Menu -->
+  <div id="mobile-header" class="topnav">
+    <a href="/introduction" class="active">Johans Page</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="menu-hamburger">
+      <a href="/introduction" class="intro-link">Introduction</a>
+      <a href="/resume" class="resume-link">Resume</a>
+      <a href="/portfolio" class="portfolio-link">Portfolio</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <span class="icon" id="hamburger-icon">
+      <i class="fa fa-bars"></i>
+    </span>
+  </div>
+
+  <div id="desktop-header">
+    <table>
+      <tbody>
+        <tr>
+          
+          <th>
+            <h1 id="title"><a href="/introduction">Johan Page</a></h1>
+          </th>
+
+          <th>
+            <table>
+              <tbody>
+                <tr id="menu">
+                  <th id="intro-menu-item" class="menu-item intro-link" value="intro">
+                    <a href="/introduction">Introduction</a>
+                  </th>
+
+                  <th id="resume-menu-item" class="menu-item resume-link" value="resume">
+                    <a href="/resume">Resume</a>
+                  </th>
+
+                  <th id="portfolio-menu-item" class="menu-item portfolio-link" value="portfolio">
+                    <a href="/portfolio">Portfolio</a>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </th>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div id="main">    
+    <div id="error-page" class="page">
+  The page you requested cannot be found. If you suspect something is wrong, please email me at <a class="mail-link" href="mailto:gejohan.dev@gmail.com">gejohan.dev@gmail.com</a>.
+</div>
+
+  </div>
+</body>
+</html>

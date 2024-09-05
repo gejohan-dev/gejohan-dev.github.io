@@ -14,7 +14,10 @@
   
   <link rel="stylesheet" type="text/css" href="static/style.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
   
   <script src="static/jquery.js"></script> 
   <script src="static/script.js"></script> 
@@ -40,31 +43,17 @@
     <table>
       <tbody>
         <tr>
-          
-          <th>
-            <h1 id="title"><a href="/introduction">Johan Page</a></h1>
-          </th>
+          <td id="intro-menu-item" class="menu-item intro-link" value="intro">
+            <a href="/introduction">Introduction</a>
+          </td>
 
-          <th>
-            <table>
-              <tbody>
-                <tr id="menu">
-                  <th id="intro-menu-item" class="menu-item intro-link" value="intro">
-                    <a href="/introduction">Introduction</a>
-                  </th>
+          <td id="resume-menu-item" class="menu-item resume-link" value="resume">
+            <a href="/resume">Resume</a>
+          </td>
 
-                  <th id="resume-menu-item" class="menu-item resume-link" value="resume">
-                    <a href="/resume">Resume</a>
-                  </th>
-
-                  <th id="portfolio-menu-item" class="menu-item portfolio-link" value="portfolio">
-                    <a href="/portfolio">Portfolio</a>
-                  </th>
-                </tr>
-              </tbody>
-            </table>
-          </th>
-          
+          <td id="portfolio-menu-item" class="menu-item portfolio-link" value="portfolio">
+            <a href="/portfolio">Portfolio</a>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -72,10 +61,43 @@
   
   <div id="main">    
     <div id="intro-page" class="page">
-  Hi! My name is Johan and I'm 29 years old. I was born in Gothenburg and live there together with my girlfriend and three cats. I work as a Software Developer. My private projects are "as-much-as-possible-from-scratch" <b>C/C++</b> applications, mostly game engines. Feel free to check out my <a href="/resume" class="page-link resume-link">Resume</a> and <a href="/portfolio" class="page-link portfolio-link">Portfolio</a>. I'll probably start uploading some demos to this site in the future and do some write-ups of the things I found interesting while working on my projects.
-  <br>
-  <br>
-  You can reach out to me at <a class="mail-link" href="mailto:gejohan.dev@gmail.com">gejohan.dev@gmail.com</a>.
+  <table id="header">
+    <tr>
+      <td id="name-header">
+        CECILY NOWAK
+      </td>
+      <td id="title-header">
+        USER EXPERIENCE ARCHITECT
+      </td>
+    </tr>
+  </table>
+
+  <table id="work-section">
+    <tr>
+      <td id="work-title">
+        WORK
+      </td>
+      <td id="work-list">
+        <ul>
+          <li>&#8599; Med Tech Client</li>
+          <li>&#8599; Med Tech Client</li>
+          <li>&#8599; Med Tech Client</li>
+          <li>&#8599; Med Tech Client</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table id="about-section">
+    <tr>
+      <td id="about-title">
+        ABOUT
+      </td>
+      <td id="about-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </td>
+    </tr>
+  </table>
 </div>
 
   </div>
